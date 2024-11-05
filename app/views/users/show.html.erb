@@ -1,0 +1,14 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<h1>Mon Profil</h1>
+<p>Prénom : <%= current_user.first_name %></p>
+<p>Nom : <%= current_user.last_name %></p>
+<p>Email : <%= current_user.email %></p>
+
+<h2>Mes Événements</h2>
+<% @events.each do |event| %>
+  <p><%= link_to event.title, event_path(event) %></p>
+<% end %>
+
+<%= link_to "Éditer mon email/mot de passe", edit_user_registration_path %>

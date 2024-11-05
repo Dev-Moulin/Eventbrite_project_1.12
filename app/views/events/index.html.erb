@@ -1,0 +1,11 @@
+<h1>Events#index</h1>
+<p>Find me in app/views/events/index.html.erb</p>
+
+<h1>Liste des événements</h1>
+<% @events.each do |event| %>
+  <div>
+    <h2><%= link_to event.title, event_path(event) %></h2>
+    <p><%= event.description %></p>
+    <p>Prix: <%= number_to_currency(event.price) %></p>
+  </div>
+<% end %>

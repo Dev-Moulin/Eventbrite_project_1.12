@@ -1,0 +1,21 @@
+
+
+
+
+<h1><%= @event.title %></h1>
+
+
+
+<p><%= @event.description %></p>
+
+
+<p>Date : <%= @event.start_date %></p>
+
+<p>Durée : <%= @event.duration %> heures</p>
+
+<p>Lieu : <%= @event.location %></p>
+
+<p>Prix : <%= number_to_currency(@event.price) %></p>
+
+<p>Créé par : <%= @event.administrator.email %></p>
+

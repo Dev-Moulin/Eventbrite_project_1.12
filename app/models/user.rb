@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :events, foreign_key: 'administrator_id'
   #foreign_key: 'administrator_id' : spécifie que l’attribut 
   #administrator_id dans le modèle Event fait référence à l'utilisateur 
