@@ -87,6 +87,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address: 'in-v3.mailjet.com',
   port: 587,
+  domain: 'eventbrite-project-1-0',
   user_name: ENV['MAILJET_API_KEY'],
   password: ENV['MAILJET_SECRET_KEY'],
   authentication: 'plain',
