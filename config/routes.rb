@@ -16,7 +16,18 @@ Rails.application.routes.draw do
   # root "posts#index"
   root 'events#index'
   resources :users, only: [:show]
-  resources :events
+  resources :events do
+    resources :attendances, only: [:new, :create]
+  end
 
   
+    scope '/checkout' do
+      post 'create', to: 'checkout#create', as: 'checkout_create'
+      get 'success', to: 'checkout#success', as: 'checkout_success'
+      get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+  end
+
+
+  
+
 end

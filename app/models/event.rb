@@ -28,5 +28,9 @@ class Event < ApplicationRecord
       errors.add(:start_date, "can't be in the past")
     end
   end
+  def is_free?
+    price == 0
+  end
+  
   
 end

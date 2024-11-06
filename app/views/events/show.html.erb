@@ -19,3 +19,6 @@
 
 <p>Créé par : <%= @event.administrator.email %></p>
 
+<% if current_user == @event.administrator %>
+  <%= link_to "Mon espace événement", event_attendances_path(@event), class: "btn btn-secondary" %>
+<% end %>

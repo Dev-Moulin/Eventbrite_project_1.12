@@ -1,0 +1,6 @@
+<h2>Participants pour l'événement : <%= @event.title %></h2>
+<ul>
+  <% @event.participants.each do |participant| %>
+    <li><%= participant.email %></li>
+  <% end %>
+</ul>
